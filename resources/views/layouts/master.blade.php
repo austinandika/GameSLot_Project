@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="css/layouts/master.css">
     <link rel="stylesheet" href="css/layouts/navbarGuest.css">
+    <link rel="stylesheet" href="css/layouts/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -21,5 +22,16 @@
     <section>
         @yield('body')
     </section>
+
+    <footer>
+        <div class="Footer">
+            © 2021 SL Inc. All Rights Reserved
+        </div>
+
+    </footer>
+
 </body>
+
+
+
 </html>
