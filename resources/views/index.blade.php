@@ -1,5 +1,6 @@
 @extends('layouts.master')
+@section('title', 'Home')
 
-@section('body')
+@section('content')
 
 @endsection
