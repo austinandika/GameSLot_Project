@@ -23,15 +23,15 @@
         @include('layouts.navbarGuest')
     </header>
 
-{{--    <section class="navbar-section">--}}
-{{--        @include('layouts.navbarMember')--}}
-{{--    </section>--}}
+   {{-- <section class="navbar-section">
+       @include('layouts.navbarMember')
+   </section> --}}
 
-{{--    <section class="navbar-section">--}}
-{{--        @include('layouts.navbarAdmin')--}}
-{{--    </section>--}}
+   {{-- <section class="navbar-section">
+       @include('layouts.navbarAdmin')
+   </section> --}}
 
-    <section class="flex-fill bg-light">
+    <section class="flex-fill bg-light py-4">
         @yield('content')
     </section>
 
