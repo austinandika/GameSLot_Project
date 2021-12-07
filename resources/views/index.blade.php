@@ -2,5 +2,281 @@
 @section('title', 'Home')
 
 @section('content')
+    <div class="container">
 
+        <div class="row row-cols-1 row-cols-md-5 g-4">
+            <a href="" class="text-decoration-none">
+                <div class="col">
+                    <div class="card h-100 bg-white border border-light">
+                        <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
+                            <img class="h-100 w-100 card-img-top rounded-circle border border-1" style="" src="{{\Illuminate\Support\Facades\Storage::url('csgo-bg.jpg')}}" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title text-center text-dark">Counter-Strike Global Offensive</h6>
+                            <p class="card-text text-center border border-0 rounded-pill px-3 mx-auto mt-4 text-success fw-bold" style="width: fit-content; background-color: lightgreen; font-size: 14px">
+                                FPS
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text text-center px-3 mx-auto mb-3 fw-bold text-dark">
+                            FREE
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+
+
+
+
+
+
+
+            <a href="" class="text-decoration-none">
+                <div class="col">
+                    <div class="card h-100 bg-white border border-light">
+                        <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
+                            <img class="h-100 w-100 card-img-top rounded-circle border border-1" style="" src="{{\Illuminate\Support\Facades\Storage::url('csgo-bg.jpg')}}" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title text-center text-dark">Counter-Strike Global Offensive</h6>
+                            <p class="card-text text-center border border-0 rounded-pill px-3 mx-auto mt-4 text-success fw-bold" style="width: fit-content; background-color: lightgreen; font-size: 14px">
+                                FPS
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text text-center px-3 mx-auto mb-3 fw-bold text-dark">
+                            FREE
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="text-decoration-none">
+                <div class="col">
+                    <div class="card h-100 bg-white border border-light">
+                        <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
+                            <img class="h-100 w-100 card-img-top rounded-circle border border-1" style="" src="{{\Illuminate\Support\Facades\Storage::url('csgo-bg.jpg')}}" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title text-center text-dark">Counter-Strike Global Offensive</h6>
+                            <p class="card-text text-center border border-0 rounded-pill px-3 mx-auto mt-4 text-success fw-bold" style="width: fit-content; background-color: lightgreen; font-size: 14px">
+                                FPS
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text text-center px-3 mx-auto mb-3 fw-bold text-dark">
+                            FREE
+                        </p>
+                    </div>
+                </div>
+            </a><a href="" class="text-decoration-none">
+                <div class="col">
+                    <div class="card h-100 bg-white border border-light">
+                        <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
+                            <img class="h-100 w-100 card-img-top rounded-circle border border-1" style="" src="{{\Illuminate\Support\Facades\Storage::url('csgo-bg.jpg')}}" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title text-center text-dark">Counter-Strike Global Offensive</h6>
+                            <p class="card-text text-center border border-0 rounded-pill px-3 mx-auto mt-4 text-success fw-bold" style="width: fit-content; background-color: lightgreen; font-size: 14px">
+                                FPS
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text text-center px-3 mx-auto mb-3 fw-bold text-dark">
+                            FREE
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="text-decoration-none">
+                <div class="col">
+                    <div class="card h-100 bg-white border border-light">
+                        <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
+                            <img class="h-100 w-100 card-img-top rounded-circle border border-1" style="" src="{{\Illuminate\Support\Facades\Storage::url('csgo-bg.jpg')}}" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title text-center text-dark">Counter-Strike Global Offensive</h6>
+                            <p class="card-text text-center border border-0 rounded-pill px-3 mx-auto mt-4 text-success fw-bold" style="width: fit-content; background-color: lightgreen; font-size: 14px">
+                                FPS
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text text-center px-3 mx-auto mb-3 fw-bold text-dark">
+                            FREE
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="text-decoration-none">
+                <div class="col">
+                    <div class="card h-100 bg-white border border-light">
+                        <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
+                            <img class="h-100 w-100 card-img-top rounded-circle border border-1" style="" src="{{\Illuminate\Support\Facades\Storage::url('csgo-bg.jpg')}}" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title text-center text-dark">Counter-Strike Global Offensive</h6>
+                            <p class="card-text text-center border border-0 rounded-pill px-3 mx-auto mt-4 text-success fw-bold" style="width: fit-content; background-color: lightgreen; font-size: 14px">
+                                FPS
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text text-center px-3 mx-auto mb-3 fw-bold text-dark">
+                            FREE
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="text-decoration-none">
+                <div class="col">
+                    <div class="card h-100 bg-white border border-light">
+                        <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
+                            <img class="h-100 w-100 card-img-top rounded-circle border border-1" style="" src="{{\Illuminate\Support\Facades\Storage::url('csgo-bg.jpg')}}" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title text-center text-dark">Counter-Strike Global Offensive</h6>
+                            <p class="card-text text-center border border-0 rounded-pill px-3 mx-auto mt-4 text-success fw-bold" style="width: fit-content; background-color: lightgreen; font-size: 14px">
+                                FPS
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text text-center px-3 mx-auto mb-3 fw-bold text-dark">
+                            FREE
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="text-decoration-none">
+                <div class="col">
+                    <div class="card h-100 bg-white border border-light">
+                        <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
+                            <img class="h-100 w-100 card-img-top rounded-circle border border-1" style="" src="{{\Illuminate\Support\Facades\Storage::url('csgo-bg.jpg')}}" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title text-center text-dark">Counter-Strike Global Offensive</h6>
+                            <p class="card-text text-center border border-0 rounded-pill px-3 mx-auto mt-4 text-success fw-bold" style="width: fit-content; background-color: lightgreen; font-size: 14px">
+                                FPS
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text text-center px-3 mx-auto mb-3 fw-bold text-dark">
+                            FREE
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="text-decoration-none">
+                <div class="col">
+                    <div class="card h-100 bg-white border border-light">
+                        <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
+                            <img class="h-100 w-100 card-img-top rounded-circle border border-1" style="" src="{{\Illuminate\Support\Facades\Storage::url('csgo-bg.jpg')}}" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title text-center text-dark">Counter-Strike Global Offensive</h6>
+                            <p class="card-text text-center border border-0 rounded-pill px-3 mx-auto mt-4 text-success fw-bold" style="width: fit-content; background-color: lightgreen; font-size: 14px">
+                                FPS
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text text-center px-3 mx-auto mb-3 fw-bold text-dark">
+                            FREE
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="text-decoration-none">
+                <div class="col">
+                    <div class="card h-100 bg-white border border-light">
+                        <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
+                            <img class="h-100 w-100 card-img-top rounded-circle border border-1" style="" src="{{\Illuminate\Support\Facades\Storage::url('csgo-bg.jpg')}}" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title text-center text-dark">Counter-Strike Global Offensive</h6>
+                            <p class="card-text text-center border border-0 rounded-pill px-3 mx-auto mt-4 text-success fw-bold" style="width: fit-content; background-color: lightgreen; font-size: 14px">
+                                FPS
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text text-center px-3 mx-auto mb-3 fw-bold text-dark">
+                            FREE
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="text-decoration-none">
+                <div class="col">
+                    <div class="card h-100 bg-white border border-light">
+                        <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
+                            <img class="h-100 w-100 card-img-top rounded-circle border border-1" style="" src="{{\Illuminate\Support\Facades\Storage::url('csgo-bg.jpg')}}" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title text-center text-dark">Counter-Strike Global Offensive</h6>
+                            <p class="card-text text-center border border-0 rounded-pill px-3 mx-auto mt-4 text-success fw-bold" style="width: fit-content; background-color: lightgreen; font-size: 14px">
+                                FPS
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text text-center px-3 mx-auto mb-3 fw-bold text-dark">
+                            FREE
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="text-decoration-none">
+                <div class="col">
+                    <div class="card h-100 bg-white border border-light">
+                        <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
+                            <img class="h-100 w-100 card-img-top rounded-circle border border-1" style="" src="{{\Illuminate\Support\Facades\Storage::url('csgo-bg.jpg')}}" alt="">
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title text-center text-dark">Counter-Strike Global Offensive</h6>
+                            <p class="card-text text-center border border-0 rounded-pill px-3 mx-auto mt-4 text-success fw-bold" style="width: fit-content; background-color: lightgreen; font-size: 14px">
+                                FPS
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <p class="card-text text-center px-3 mx-auto mb-3 fw-bold text-dark">
+                            FREE
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
 @endsection

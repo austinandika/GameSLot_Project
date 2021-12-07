@@ -24,3 +24,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::get('/manage-game', function () {
+    return view('AdminMenu/manageGame');
+});
