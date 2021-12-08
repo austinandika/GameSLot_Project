@@ -31,7 +31,7 @@
        @include('layouts.navbarAdmin')
    </section> --}}
 
-    <section class="flex-fill bg-light py-4">
+    <section class="flex-fill bg-light py-5">
         @yield('content')
     </section>
 
