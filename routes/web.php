@@ -28,3 +28,39 @@ Route::get('/register', function () {
 Route::get('/manage-game', function () {
     return view('AdminMenu/manageGame');
 });
+
+Route::get('/game-detail', function () {
+    return view('gameDetail');
+});
+
+Route::get('/update-game', function () {
+    return view('AdminMenu/updateGame');
+});
+
+Route::get('/add-game', function () {
+    return view('AdminMenu/addGame');
+});
+
+Route::get('/manage-game-genre', function () {
+    return view('AdminMenu/manageGameGenre');
+});
+
+Route::get('/update-game-genre', function () {
+    return view('AdminMenu/updateGameGenre');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('/transaction-history', function () {
+    return view('transactionHistory');
+});
+
+Route::get('/transaction-history-detail', function () {
+    return view('transactionHistDetail');
+});

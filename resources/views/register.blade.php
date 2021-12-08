@@ -2,10 +2,10 @@
 @section('title', 'Login')
 
 @section('content')
-    <div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-        <div class="row">
-            <div class="col-sm"></div>
-            <div class="col-sm" style="margin: auto">
+    <div class="container" style="min-height: 30vw">
+        <div class="row" style="min-height: 30vw">
+            <div class="col"></div>
+            <div class="col d-flex flex-column justify-content-center">
                 <div class="text-center mb-4">
                     <div>
                         <img class="mx-auto" height="35px" src="{{\Illuminate\Support\Facades\Storage::url('Logo.png')}}" alt="">
@@ -19,19 +19,19 @@
                     {{-- Name --}}
                     <div class="mb-3">
                         <label for="txtName" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="txtName">
+                        <input type="text" class="form-control" id="txtName" name="txtName">
                     </div>
 
                     {{-- Email --}}
                     <div class="mb-3">
                         <label for="txtEmail" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp" name="txtEmail">
                     </div>
 
                     {{-- Password --}}
                     <div class="mb-3">
                         <label for="txtPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="txtPassword">
+                        <input type="password" class="form-control" id="txtPassword" name="txtPassword">
                     </div>
 
                     {{-- Gender --}}
@@ -55,14 +55,14 @@
                     {{-- Date --}}
                     <div class="mb-3">
                         <label for="txtDateOfBirth" class="form-label">Date of Birth</label>
-                        <input class="date form-control" type="text" id="txtDateOfBirth" placeholder="mm/dd/yyyy">
+                        <input class="date form-control" type="text" id="txtDateOfBirth" name="txtDateOfBirth" placeholder="mm/dd/yyyy">
                     </div>
 
 
                     <button type="submit" class="btn btn-primary" style="width: 100%">Sign Up</button>
                 </form>
             </div>
-            <div class="col-sm"></div>
+            <div class="col"></div>
         </div>
 
 
