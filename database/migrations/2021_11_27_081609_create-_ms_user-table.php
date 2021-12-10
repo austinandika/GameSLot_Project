@@ -13,18 +13,18 @@ class CreateMsUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('MsUser', function (Blueprint $table) {
+        Schema::create('ms_users', function (Blueprint $table) {
             $table->id();
-            $table->string('Name', 50);
-            $table->string('Photo', 255);
-            $table->string('Email', 50);
-            $table->string('Password', 255);
-            $table->string('Gender', 20);
-            $table->date('DateOfBirth');
-            $table->bigInteger('Role_Id',false,true);
+            $table->string('name', 50);
+            $table->string('photo', 255)->nullable();
+            $table->string('email', 50);
+            $table->string('password', 255);
+            $table->string('gender', 20);
+            $table->date('date_of_birth');
+            $table->bigInteger('role_id', false, true);
             $table->timestamps();
 
-            $table->foreign('Role_Id')->references('id')->on('MsRole');
+            $table->foreign('role_id')->references('id')->on('ms_roles');
         });
     }
 

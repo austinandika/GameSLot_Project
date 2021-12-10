@@ -13,10 +13,10 @@ class CreateMsRoleTable extends Migration
      */
     public function up()
     {
-        Schema::create('MsRole', function (Blueprint $table){
-          $table->id();
-          $table->string('Name', 50);
-          $table->timestamps();
+        Schema::create('ms_roles', function (Blueprint $table) {
+            $table->id();
+            $table->string('name', 50);
+            $table->timestamps();
         });
     }
 

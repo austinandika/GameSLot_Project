@@ -19,17 +19,23 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <header class="bg-white">
-        @include('layouts.navbarGuest')
-    </header>
+    @auth
+        @if ( auth()->user()->role_id == 1)
+            <section class="navbar-section">
+                @include('layouts.navbarAdmin')
+            </section>
 
-   {{-- <section class="navbar-section">
-       @include('layouts.navbarMember')
-   </section> --}}
-
-   {{-- <section class="navbar-section">
-       @include('layouts.navbarAdmin')
-   </section> --}}
+        @elseif ( auth()->user()->role_id  == 2)
+            <section class="navbar-section">
+                @include('layouts.navbarMember')
+            </section>
+        @endif
+    {{-- jika guest / tidak terautentikasi --}}
+    @else
+        <header class="bg-white">
+            @include('layouts.navbarGuest')
+        </header>
+    @endauth
 
     <section class="flex-fill bg-light py-5">
         @yield('content')

@@ -25,7 +25,7 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" style="right: 0; left: auto" aria-labelledby="dropdownMenuLink">
-                    <span class="dropdown-item">Hi, <b>member</b></span>
+                    <span class="dropdown-item">Hi, <b>{{ auth()->user()->name }}</b></span>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Your Profile</a>
                     <a class="dropdown-item" href="#">Transaction History</a>

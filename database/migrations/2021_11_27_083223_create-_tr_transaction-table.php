@@ -13,13 +13,13 @@ class CreateTrTransactionTable extends Migration
      */
     public function up()
     {
-        Schema::create('TrTransaction', function (Blueprint $table) {
+        Schema::create('tr_transactions', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('Date');
-            $table->bigInteger('User_Id',false, true);
+            $table->dateTime('date');
+            $table->bigInteger('user_id', false, true);
             $table->timestamps();
 
-            $table->foreign('User_Id')->references('id')->on('MsUser');
+            $table->foreign('user_id')->references('id')->on('ms_users');
         });
     }
 

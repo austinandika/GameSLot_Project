@@ -10,8 +10,8 @@
         </form>
 
         <div class="button-container me-3">
-            <button type="button" class="btn btn-primary mx-1">Sign In</button>
-            <button type="button" class="btn btn-outline-primary mx-1">Sign Up</button>
+            <a href="/login" class="btn btn-primary mx-1">Sign In</a>
+            <a href="/register" class="btn btn-outline-primary mx-1">Sign Up</a>
         </div>
     </div>
 </nav>

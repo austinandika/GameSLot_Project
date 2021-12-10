@@ -9,11 +9,13 @@ class MsGame extends Model
 {
     use HasFactory;
 
-    public function transactionDetail(){
+    public function transactionDetail()
+    {
         return $this->hasMany(TrTransactionDetail::class);
     }
 
-    public function gameGenre(){
+    public function gameGenre()
+    {
         return $this->belongsTo(MsGameGenre::class);
     }
 }
