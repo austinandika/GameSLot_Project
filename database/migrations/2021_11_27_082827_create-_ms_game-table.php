@@ -13,17 +13,17 @@ class CreateMsGameTable extends Migration
      */
     public function up()
     {
-        Schema::create('MsGame', function (Blueprint $table) {
+        Schema::create('ms_games', function (Blueprint $table) {
             $table->id();
-            $table->string('Title', 50);
-            $table->string('Image', 255);
-            $table->string('Description', 255);
-            $table->integer('Price', false, true);
-            $table->integer('PEGIRating', false,true);
-            $table->bigInteger('GameGenre_Id',false,true);
+            $table->string('title', 50);
+            $table->string('image', 255);
+            $table->string('description', 255);
+            $table->integer('price', false, true);
+            $table->integer('pegi_rating', false, true);
+            $table->bigInteger('game_genre_id', false, true);
             $table->timestamps();
 
-            $table->foreign('GameGenre_Id')->references('id')->on('MsGameGenre');
+            $table->foreign('game_genre_id')->references('id')->on('ms_game_genres');
         });
     }
 

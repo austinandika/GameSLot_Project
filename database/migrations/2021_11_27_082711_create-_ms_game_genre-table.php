@@ -13,9 +13,9 @@ class CreateMsGameGenreTable extends Migration
      */
     public function up()
     {
-        Schema::create('MsGameGenre', function (Blueprint $table) {
+        Schema::create('ms_game_genres', function (Blueprint $table) {
             $table->id();
-            $table->string('Genre', 20);
+            $table->string('genre', 20);
             $table->timestamps();
         });
     }

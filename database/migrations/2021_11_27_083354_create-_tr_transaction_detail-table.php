@@ -13,19 +13,19 @@ class CreateTrTransactionDetailTable extends Migration
      */
     public function up()
     {
-        Schema::create('MsTransactionDetail', function (Blueprint $table) {
+        Schema::create('ms_transaction_details', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('Transaction_Id',false,true);
-            $table->bigInteger('Game_Id',false, true);
+            $table->bigInteger('transaction_id', false, true);
+            $table->bigInteger('game_id', false, true);
 
-            $table->string('GameTitle', 50);
-            $table->integer('GamePrice', false, true);
-            $table->integer('Quantity', false, true);
+            $table->string('game_title', 50);
+            $table->integer('game_price', false, true);
+            $table->integer('quantity', false, true);
             $table->timestamps();
 
-            $table->unique('Transaction_Id');
-            $table->foreign('Transaction_Id')->references('id')->on('TrTransaction');
-            $table->foreign('Game_Id')->references('id')->on('MsGame');
+            $table->unique('transaction_id');
+            $table->foreign('transaction_id')->references('id')->on('tr_transactions');
+            $table->foreign('game_id')->references('id')->on('ms_games');
         });
     }
 
