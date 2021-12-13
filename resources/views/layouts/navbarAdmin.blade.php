@@ -29,7 +29,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Your Profile</a>
                     <a class="dropdown-item" href="#">Transaction History</a>
-                    <a class="dropdown-item" href="#">Sign Out</a>
+                    <a class="dropdown-item" href="{{ url('logout') }}">Sign Out</a>
                 </div>
             </div>
         </div>
