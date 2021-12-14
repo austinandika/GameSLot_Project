@@ -12,16 +12,16 @@
                 <div class="d-flex justify-content-between mb-3">
                     <div>
                         <div class="fw-bold">
-                            Transaction ID&emsp;: 1
+                            Transaction ID&emsp;: {{ $transactions->id }}
                         </div>
                         <div class="fw-bold">
-                            Customer&emsp;&emsp;&emsp; : Admina
+                            Customer&emsp;&emsp;&emsp; : {{ $transactions->user->name }}
                         </div>
                     </div>
 
                     <div>
                         <div class="fw-bold">
-                            Transaction Date : 2021-05-31 00:00:00
+                            Transaction Date : {{ $transactions->date }}
                         </div>
                     </div>
                 </div>
@@ -37,33 +37,35 @@
                     </tr>
                     </thead>
                     <tbody style="background-color: white">
-                    <tr class="">
-                        <td class="align-middle">
-                            <div class="fw-bold ms-3">
-                                Counter-Strike: Global Offensive
-                            </div>
-                        </td>
 
-                        <td class="align-middle" >
-                            0
-                        </td>
+                        @foreach ($transactions->transactionDetail as $detail)
+                            <tr class="">
+                                <td class="align-middle">
+                                    <div class="fw-bold ms-3">
+                                        {{ $detail->game->title }}
+                                    </div>
+                                </td>
 
-                        <td class="align-middle" >
-                            1
-                        </td>
+                                <td class="align-middle" >
+                                    ${{ $detail->game_price }}
+                                </td>
 
-                        <td class="align-middle text-end">
-                            <div class="me-3 fw-bold">
-                                $30
-                            </div>
-                        </td>
-                    </tr>
+                                <td class="align-middle" >
+                                    {{ $detail->quantity }}
+                                </td>
 
+                                <td class="align-middle text-end">
+                                    <div class="me-3 fw-bold">
+                                        {{ $detail->game_price * $detail->quantity }}
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
 
                 <div class="total d-flex justify-content-end fw-bold">
-                    Total: $40
+                    Total: {{ $transactions->transactionDetail->sum($transactions->game_price * $transactions->quantity) }}
                 </div>
             </div>
             <div class="col-1">

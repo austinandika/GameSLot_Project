@@ -3,10 +3,16 @@
 
 @section('content')
     <div class="container">
+        @if(session()->has('isAddedToCart'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{session('isAddedToCart')}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
 
         <div class="row row-cols-1 row-cols-md-5 g-4">
             @foreach ($games as $game)
-                <a href="" class="text-decoration-none">
+                <a href="/game/{{ $game->id }}" class="text-decoration-none">
                     <div class="col">
                         <div class="card bg-white border border-light" style="height: 350px">
                             <div class="image mx-auto mt-4" style="width: 100px; height: 100px">
