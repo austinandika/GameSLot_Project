@@ -15,7 +15,7 @@
         </form>
 
         <div class="button-container me-3 d-flex flex-row">
-            <a href="" class="my-auto mx-3">
+            <a href="{{ url('/cart') }}" class="my-auto mx-3">
                 <i class="fa fa-shopping-cart text-secondary fs-3" aria-hidden="true"></i>
             </a>
 

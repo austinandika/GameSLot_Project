@@ -24,5 +24,16 @@ class MsUserSeeder extends Seeder
             'date_of_birth' => date('Y-m-d H:i:s', strtotime('12/13/2021')),
             'role_id' => 1
         ]);
+
+
+        DB::table('ms_users')->insert([
+            'name' => 'Austin Andika Tanujaya',
+            'photo' => null,
+            'email' => 'austin.tanujaya@binus.ac.id',
+            'password' => Hash::make('austin'),
+            'gender' => 'Male',
+            'date_of_birth' => date('Y-m-d H:i:s', strtotime('01/18/2001')),
+            'role_id' => 2
+        ]);
     }
 }

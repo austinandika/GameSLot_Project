@@ -9,11 +9,13 @@ class TrTransaction extends Model
 {
     use HasFactory;
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(MsUser::class);
     }
 
-    public function transactionDetail(){
-        return $this->hasMany(TrTransactionDetail::class);
+    public function transactionDetail()
+    {
+        return $this->hasMany(TrTransactionDetail::class, 'transaction_id');
     }
 }

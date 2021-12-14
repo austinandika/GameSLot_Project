@@ -19,26 +19,30 @@
                     </tr>
                     </thead>
                     <tbody style="background-color: white">
+
+                    @foreach ($transactions as $transaction)
                     <tr class="">
                         <td class="align-middle">
                             <div class="fw-bold ms-3">
-                                1
+                                {{ $transaction->id }}
                             </div>
                         </td>
 
                         <td class="align-middle text-center" >
-                            2021-05-31 00:00:00
+                            {{ $transaction->date }}
                         </td>
 
                         <td class="align-middle" >
-                            1
+                            {{ $transaction->transactionDetail->count() }}
                         </td>
 
                         <td class="text-center align-middle">
-                            <a href="" class="text-decoration-none text-primary fw-bold">Details</a>
+                            <form action="/transaction-history-detail/{{ $transaction->id }}" method="GET">
+                                <button type="submit" class="btn btn-link text-decoration-none text-primary fw-bold">Details</button>
+                            </form>
                         </td>
                     </tr>
-
+                    @endforeach
                     </tbody>
                 </table>
             </div>
