@@ -26,6 +26,10 @@ class GameController extends Controller
     public function deleteGame($id)
     {
         $game = MsGame::find($id);
+
+        // remove image
+        Storage::delete('public/' . $game->image);
+
         $game->delete();
 
         return redirect()->back();

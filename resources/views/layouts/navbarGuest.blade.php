@@ -4,9 +4,9 @@
             <img height="35px" src="{{\Illuminate\Support\Facades\Storage::url('Logo.png')}}" alt="">
         </a>
 
-        <form class="d-flex">
+        <form class="d-flex" action="{{ route('home.search') }}" method="get">
             <span class="fa fa-search form-control-feedback"></span>
-            <input class="form-control me-2" style="width: 500px" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control me-2" id="txtSearch" style="width: 500px" type="search" placeholder="Search" aria-label="Search" name="keyword">
         </form>
 
         <div class="button-container me-3">
@@ -14,6 +14,24 @@
             <a href="{{ route('account.register') }}" class="btn btn-outline-primary mx-1">Sign Up</a>
         </div>
     </div>
+
+    <style>
+        .navbar .d-flex .form-control {
+            padding-left: 35px;
+        }
+
+        .navbar .d-flex .form-control-feedback {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            width: 40px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            pointer-events: none;
+            color: #aaa;
+        }
+    </style>
 </nav>
 
 {{--<div class="navbar-container">--}}

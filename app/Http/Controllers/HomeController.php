@@ -13,4 +13,16 @@ class HomeController extends Controller
 
         return view('index', compact('games'));
     }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->keyword;
+
+        // game title starts with
+        $games = MsGame::where('title', 'LIKE', "$keyword%")
+            ->paginate(10)
+            ->appends(['keyword' => $keyword]);
+
+        return view('index', compact('games'));
+    }
 }
