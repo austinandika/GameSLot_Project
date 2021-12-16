@@ -5,8 +5,10 @@
         </a>
 
         <div class="link-container" style="margin-left: -150px">
-            <a href="{{ route('manageGame.manage') }}" style="text-decoration: none" class="text-dark me-3">Manage Game</a>
-            <a href="{{ route('manageGenre.manage') }}" style="text-decoration: none" class="text-dark ms-3">Manage Game Genre</a>
+            <a href="{{ route('manageGame.manage') }}" style="text-decoration: none" class="text-dark me-3 {{ Route::is('manageGame.manage') ?
+            'active' : '' }}">Manage Game</a>
+            <a href="{{ route('manageGenre.manage') }}" style="text-decoration: none" class="text-dark ms-3 {{ Route::is('manageGenre.manage') ?
+            'active' : '' }}">Manage Game Genre</a>
         </div>
 
         <form class="d-flex">

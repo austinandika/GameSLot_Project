@@ -18,13 +18,19 @@ class ProfileController extends Controller
 
     public function updateProfile(Request $request)
     {
-        $profile = MsUser::find(auth()->user()->id);
-        $profile->name = $request->name != null ? $request->name : $profile->name;
-        $profile->email = $request->email != null ? $request->email : $profile->email;
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'profile_photo' => 'image',
+            'email' => 'required|email:dns|unique:ms_users,email,' . auth()->user()->id
+        ]);
 
-        // get file
-        $file = $request->file('profilePhoto');
-        if ($file != null) {
+        $profile = MsUser::find(auth()->user()->id);
+        $profile->name = $request->name;
+        $profile->email = $request->email;
+
+        if ($request->profile_photo != null) {
+            // get file
+            $file = $request->file('profile_photo');
             $imageName = auth()->user()->id . '-' . time() . '.' . $file->getClientOriginalExtension();
             Storage::putFileAs('public/profileImage', $file, $imageName);
 
@@ -32,7 +38,6 @@ class ProfileController extends Controller
             if ($profile->photo != null) {
                 Storage::delete('public/' . $profile->photo);
             }
-
             $profile->photo = 'profileImage/' . $imageName;
         }
 
@@ -47,7 +52,9 @@ class ProfileController extends Controller
 
         if (Hash::check($request->oldPassword, $profile->password)) {
             $validatedData = $request->validate([
-                'password' => 'required|confirmed|min:5|max:255'
+                'old_password' => 'required',
+                'password' => 'required|confirmed|min:5|max:255',
+                'password_confirmation' => 'required'
             ]);
 
             $validatedData['password'] = Hash::make($validatedData['password']);

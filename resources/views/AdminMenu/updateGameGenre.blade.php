@@ -21,7 +21,12 @@
                                 <label for="txtGameGenre" class="form-label">Game Genre</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" id="txtGameGenre" name="genre" value="{{ $genre->genre }}">
+                                <input type="text" class="form-control @error('genre') is-invalid @enderror" id="txtGameGenre" name="genre" value="{{ $genre->genre }}">
+                                @error('genre')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </td>
                         </tr>
                         </tbody>

@@ -38,6 +38,9 @@ Route::prefix('game')->group(function () {
 
 Route::prefix('manage-game')->group(function () {
     Route::get('/', [GameController::class, 'getListGameDetail'])->name('manageGame.manage');
+    Route::get('/add', [GameController::class, 'getAddGameView'])->name('manageGame.add');
+    Route::post('/add', [GameController::class, 'addGame'])->name('manageGame.add');
+    Route::put('/update', [GameController::class, 'updateGame'])->name('manageGame.update');
     Route::get('/{id}', [GameController::class, 'getGameDetailUpdate'])->name('manageGame.detail');
     Route::delete('/delete/{id}', [GameController::class, 'deleteGame'])->name('manageGame.delete');
 });
