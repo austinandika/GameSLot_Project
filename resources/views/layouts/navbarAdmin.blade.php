@@ -1,12 +1,12 @@
 <nav class="navbar navbar-light">
     <div class="container-fluid">
-        <a href="/" class="navbar-brand ms-3">
+        <a href="{{ route('home.index') }}" class="navbar-brand ms-3">
             <img height="35px" src="{{\Illuminate\Support\Facades\Storage::url('Logo.png')}}" alt="">
         </a>
 
         <div class="link-container" style="margin-left: -150px">
-            <a href="#" style="text-decoration: none" class="text-dark me-3">Manage Game</a>
-            <a href="#" style="text-decoration: none" class="text-dark ms-3">Manage Game Genre</a>
+            <a href="{{ route('manageGame.manage') }}" style="text-decoration: none" class="text-dark me-3">Manage Game</a>
+            <a href="{{ route('manageGenre.manage') }}" style="text-decoration: none" class="text-dark ms-3">Manage Game Genre</a>
         </div>
 
         <form class="d-flex">
@@ -15,7 +15,7 @@
         </form>
 
         <div class="button-container me-3 d-flex flex-row">
-            <a href="{{ url('/cart') }}" class="my-auto mx-3">
+            <a href="{{ route('cart.list') }}" class="my-auto mx-3">
                 <i class="fa fa-shopping-cart text-secondary fs-3" aria-hidden="true"></i>
             </a>
 
@@ -27,9 +27,9 @@
                 <div class="dropdown-menu dropdown-menu-right" style="right: 0; left: auto" aria-labelledby="dropdownMenuLink">
                     <span class="dropdown-item">Hi, <b>{{ auth()->user()->name }}</b></span>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Your Profile</a>
-                    <a class="dropdown-item" href="#">Transaction History</a>
-                    <a class="dropdown-item" href="{{ url('logout') }}">Sign Out</a>
+                    <a class="dropdown-item" href="{{ route('profile.get') }}">Your Profile</a>
+                    <a class="dropdown-item" href="{{ route('transaction.history') }}">Transaction History</a>
+                    <a class="dropdown-item" href="{{ route('account.logout') }}">Sign Out</a>
                 </div>
             </div>
         </div>

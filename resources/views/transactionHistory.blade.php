@@ -37,7 +37,7 @@
                         </td>
 
                         <td class="text-center align-middle">
-                            <form action="/transaction-history-detail/{{ $transaction->id }}" method="GET">
+                            <form action="{{ route('transaction.historyDetail', $transaction->id) }}" method="GET">
                                 <button type="submit" class="btn btn-link text-decoration-none text-primary fw-bold">Details</button>
                             </form>
                         </td>

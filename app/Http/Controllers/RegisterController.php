@@ -30,6 +30,6 @@ class RegisterController extends Controller
 
         MsUser::create($validatedData);
 
-        return redirect('/login')->with('success', 'Your account has been registered. Please login');
+        return redirect()->route('account.login')->with('success', 'Your account has been registered. Please login');
     }
 }
