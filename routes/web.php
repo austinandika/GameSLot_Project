@@ -29,8 +29,10 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('account.logout'
 Route::get('/register', [RegisterController::class, 'index'])->name('account.register')->middleware('guest');
 Route::post('/register', [RegisterController::class, 'createUser'])->name('account.register');
 
-
-Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::prefix('')->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home.index');
+    Route::get('/search', [HomeController::class, 'search'])->name('home.search');
+});
 
 Route::prefix('game')->group(function () {
     Route::get('/{id}', [GameController::class, 'getGameDetail'])->name('game.detail');

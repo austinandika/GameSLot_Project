@@ -43,7 +43,7 @@
 
         <div class="my-3 d-flex justify-content-between">
             <div>
-                Showing <b>{{ $games->firstItem() }}</b> to <b>{{ $games->lastItem() }}</b> of <b>{{ $games->total() }}</b> results
+                Showing <b>{{ $games->firstItem() == null ? '0' : $games->firstItem() }}</b> to <b>{{ $games->lastItem() }}</b> of <b>{{ $games->total() }}</b> results
             </div>
 
             <div>

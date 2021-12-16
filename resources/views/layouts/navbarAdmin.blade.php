@@ -11,9 +11,9 @@
             'active' : '' }}">Manage Game Genre</a>
         </div>
 
-        <form class="d-flex">
-            <span class="fa fa-search form-control-feedback"></span>
-            <input class="form-control me-2" style="width: 500px" type="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex search" action="{{ route('home.search') }}" method="get">
+            <span class="fa fa-search form-control-feedback search-icon"></span>
+            <input class="form-control search-input me-2" id="txtSearch" style="width: 500px" type="search" placeholder="Search" aria-label="Search" name="keyword">
         </form>
 
         <div class="button-container me-3 d-flex flex-row">
@@ -36,6 +36,23 @@
             </div>
         </div>
     </div>
+    <style>
+        .navbar .d-flex .form-control {
+            padding-left: 35px;
+        }
+
+        .navbar .d-flex .form-control-feedback {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            width: 40px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            pointer-events: none;
+            color: #aaa;
+        }
+    </style>
 </nav>
 
 
