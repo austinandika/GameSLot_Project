@@ -9,8 +9,20 @@
             </div>
 
             <div class="col-10">
+                @if(session()->has('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{session('success')}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @elseif (session()->has('failed'))
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{session('failed')}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
                 <div class="d-flex justify-content-end mb-3">
-                    <button type="button" class="btn btn-primary px-4">Add Game</button>
+                    <a href="{{ route('manageGame.add') }}" class="btn btn-primary px-4">Add Game</a>
                 </div>
 
 

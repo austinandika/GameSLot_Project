@@ -25,9 +25,13 @@ class GenreController extends Controller
     {
         $genre = MsGameGenre::find($request->id);
 
+        $request->validate([
+            'genre' => 'required|unique:ms_game_genres,genre,' . $genre->id
+        ]);
+
         $genre->genre = $request->genre != null ? $request->genre : $genre->genre;
         $genre->save();
 
-        return redirect()->route('manageGenre.manage');
+        return redirect()->route('manageGenre.manage')->with('success', 'Genre has been updated');
     }
 }

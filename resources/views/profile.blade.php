@@ -33,16 +33,29 @@
                                 <label for="txtName" class="form-label">Name</label>
                             </td>
                             <td style="width: 70%;">
-                                <input type="text" class="form-control" id="txtName" name="name" value="{{ $profile->name }}">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="txtName" name="name" value="{{ $profile->name }}">
+                                @error('name')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <label for="fuPhoto">Photo</label>
                             </td>
-                            <td class="d-flex justify-content-between">
-                                <img class="card-img-top rounded-circle border border-1" style="width: 40px; height: 40px" src="{{\Illuminate\Support\Facades\Storage::url($profile->photo == null ? 'profileImage/default-profile.png' : $profile->photo)}}" alt="">
-                                <input type="file" class="form-control-file" id="fuPhoto" name="profilePhoto">
+                            <td>
+                                <div class="d-flex justify-content-between">
+                                    <img class="card-img-top rounded-circle border border-1" style="width: 40px; height: 40px" src="{{\Illuminate\Support\Facades\Storage::url($profile->photo == null ? 'profileImage/default-profile.png' : $profile->photo)}}" alt="">
+                                    <input type="file" class="form-control-file" id="fuPhoto" name="profile_photo">
+                                </div>
+
+                                @error('profile_photo')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </td>
                         </tr>
                         <tr>
@@ -50,7 +63,12 @@
                                 <label for="txtEmail" class="form-label">Email</label>
                             </td>
                             <td>
-                                <input type="email" class="form-control" id="txtEmail" name="email" aria-describedby="emailHelp" value="{{ $profile->email }}">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" id="txtEmail" name="email" aria-describedby="emailHelp" value="{{ $profile->email }}">
+                                @error('email')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </td>
                         </tr>
                         <tr>
@@ -94,7 +112,12 @@
                                     <label for="txtOldPassword" class="form-label">Old Password</label>
                                 </td>
                                 <td style="width: 70%;">
-                                    <input type="password" class="form-control @error('oldPassword') is-invalid @enderror" id="txtOldPassword" name="oldPassword">
+                                    <input type="password" class="form-control @error('old_password') is-invalid @enderror" id="txtOldPassword" name="old_password">
+                                    @error('old_password')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </td>
                             </tr>
                             <tr>
