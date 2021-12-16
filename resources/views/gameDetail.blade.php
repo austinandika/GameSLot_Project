@@ -9,7 +9,7 @@
             </div>
 
             <div class="col-10">
-                <form action="{{ url('/add-to-cart') }}" method="POST">
+                <form action="{{ route('cart.add') }}" method="POST">
                     @csrf
                     <div class="card bg-dark text-white">
                         <img class="card-img" style="height: 600px" src="{{\Illuminate\Support\Facades\Storage::url('game-detail-bg.jpg')}}" alt="Card image">

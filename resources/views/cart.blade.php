@@ -9,7 +9,7 @@
             </div>
 
             <div class="col-10">
-                <form action="/checkout" method="POST">
+                <form action="{{ route('transaction.checkout') }}" method="POST">
                     @csrf
                     <div class="d-flex justify-content-end mb-3">
                         <button type="submit" class="btn btn-primary px-4">Checkout</button>
@@ -48,7 +48,7 @@
                                     {{ $cart['price'] }}
                                 </td>
 
-                                <form action="/update-cart" method="POST">
+                                <form action="{{ route('cart.update') }}" method="POST">
                                         {{method_field('put')}}
                                         @csrf
                                     <td class="align-middle" >
@@ -64,7 +64,7 @@
                                 </form>
 
                                 <td class="text-center align-middle">
-                                    <form action="/remove-cart/{{ $cart['id'] }}" method="POST">
+                                    <form action="{{ route('cart.remove', $cart['id']) }}" method="POST">
                                         {{ method_field('delete') }}
                                         @csrf
                                         <button type="submit" class="btn btn-link text-decoration-none text-danger fw-bold">Remove</button>

@@ -28,7 +28,7 @@
                         <span class="fs-5"><b>Sign in to your account</b></span>
                     </div>
                 </div>
-                    <form action="/login" method="post" class="bg-white p-4">
+                    <form action="{{ route('account.login') }}" method="post" class="bg-white p-4">
                         @csrf
                         <div class="mb-3">
                             <label for="txtEmail" class="form-label">Email address</label>

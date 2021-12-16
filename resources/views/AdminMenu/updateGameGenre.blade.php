@@ -10,21 +10,24 @@
                     <h2><b>Update Game Genre</b></h2>
                 </div>
 
-                <form action="">
+                <form action="{{ route('manageGenre.update') }}" method="POST">
+                    @csrf
+                    {{ method_field('put') }}
                     <table class="table">
                         <tbody>
                         <tr>
+                            <input type="hidden" class="form-control" id="txtGenreId" name="id" value="{{ $genre->id }}">
                             <td>
                                 <label for="txtGameGenre" class="form-label">Game Genre</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" id="txtGameGenre" name="txtGameGenre">
+                                <input type="text" class="form-control" id="txtGameGenre" name="genre" value="{{ $genre->genre }}">
                             </td>
                         </tr>
                         </tbody>
                     </table>
                     <div class="d-flex justify-content-end">
-                        <button type="button" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
                     </div>
                 </form>
             </div>

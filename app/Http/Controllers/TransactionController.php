@@ -12,31 +12,34 @@ class TransactionController extends Controller
     {
         $checkoutProduct = $request->session()->get('cart');
 
-        $transaction = new TrTransaction();
+        if ($checkoutProduct != null) {
+            $transaction = new TrTransaction();
 
-        $transaction->date = date('Y-m-d H:i:s');
-        $transaction->user_id = auth()->user()->id;
-        $transaction->save();
+            $transaction->date = date('Y-m-d H:i:s');
+            $transaction->user_id = auth()->user()->id;
+            $transaction->save();
 
-        // get transactionId
-        $savedTransactionId = $transaction->id;
+            // get transactionId
+            $savedTransactionId = $transaction->id;
 
-        foreach ($checkoutProduct as $product) {
-            $transactionDetail = new TrTransactionDetail();
-            $transactionDetail->transaction_id = $savedTransactionId;
-            $transactionDetail->game_id = (int)$product['id'];
-            $transactionDetail->game_title = $product['title'];
-            $transactionDetail->game_price = (int)$product['price'];
-            $transactionDetail->quantity = $product['quantity'];
+            foreach ($checkoutProduct as $product) {
+                $transactionDetail = new TrTransactionDetail();
+                $transactionDetail->transaction_id = $savedTransactionId;
+                $transactionDetail->game_id = (int)$product['id'];
+                $transactionDetail->game_title = $product['title'];
+                $transactionDetail->game_price = (int)$product['price'];
+                $transactionDetail->quantity = $product['quantity'];
 
-            $transactionDetail->save();
-            //dd($transactionDetail);
+                $transactionDetail->save();
+                //dd($transactionDetail);
+            }
+
+            $request->session()->forget('cart');
+            $request->session()->save();
+            return redirect()->route('transaction.history');
         }
 
-        $request->session()->forget('cart');
-        $request->session()->save();
-
-        return redirect()->action([TransactionController::class, 'getTransactionHistory']);
+        return redirect()->route('cart.list');
     }
 
     public function getTransactionHistory()

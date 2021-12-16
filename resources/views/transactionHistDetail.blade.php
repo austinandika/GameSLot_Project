@@ -37,7 +37,9 @@
                     </tr>
                     </thead>
                     <tbody style="background-color: white">
-
+                        @php
+                            $countTotal = 0;
+                        @endphp
                         @foreach ($transactions->transactionDetail as $detail)
                             <tr class="">
                                 <td class="align-middle">
@@ -47,7 +49,7 @@
                                 </td>
 
                                 <td class="align-middle" >
-                                    ${{ $detail->game_price }}
+                                    ${{ number_format($detail->game_price, 2,',','.') }}
                                 </td>
 
                                 <td class="align-middle" >
@@ -56,7 +58,10 @@
 
                                 <td class="align-middle text-end">
                                     <div class="me-3 fw-bold">
-                                        {{ $detail->game_price * $detail->quantity }}
+                                        @php
+                                            $countTotal += ($detail->game_price * $detail->quantity)
+                                        @endphp
+                                        {{ number_format($detail->game_price * $detail->quantity, 2,',','.') }}
                                     </div>
                                 </td>
                             </tr>
@@ -65,7 +70,7 @@
                 </table>
 
                 <div class="total d-flex justify-content-end fw-bold">
-                    Total: {{ $transactions->transactionDetail->sum($transactions->game_price * $transactions->quantity) }}
+                    Total: {{ number_format($countTotal, 2,',','.') }}
                 </div>
             </div>
             <div class="col-1">

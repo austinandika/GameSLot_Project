@@ -22,7 +22,7 @@
                     </div>
                 </div>
 
-                <form action="/register" method="POST" class="bg-white p-4">
+                <form action="{{ route('account.register') }}" method="POST" class="bg-white p-4">
                     @csrf
                     {{-- Name --}}
                     <div class="mb-3">

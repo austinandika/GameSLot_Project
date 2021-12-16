@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light">
     <div class="container-fluid">
-        <a href="/" class="navbar-brand ms-3">
+        <a href="{{ route('home.index') }}" class="navbar-brand ms-3">
             <img height="35px" src="{{\Illuminate\Support\Facades\Storage::url('Logo.png')}}" alt="">
         </a>
 
@@ -10,8 +10,8 @@
         </form>
 
         <div class="button-container me-3">
-            <a href="/login" class="btn btn-primary mx-1">Sign In</a>
-            <a href="/register" class="btn btn-outline-primary mx-1">Sign Up</a>
+            <a href="{{ route('account.login') }}" class="btn btn-primary mx-1">Sign In</a>
+            <a href="{{ route('account.register') }}" class="btn btn-outline-primary mx-1">Sign Up</a>
         </div>
     </div>
 </nav>

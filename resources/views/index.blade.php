@@ -12,7 +12,7 @@
 
         <div class="row row-cols-1 row-cols-md-5 g-4">
             @foreach ($games as $game)
-                <a href="/game/{{ $game->id }}" class="text-decoration-none">
+                <a href="{{ route('game.detail', $game->id) }}" class="text-decoration-none">
                     <div class="col">
                         <div class="card bg-white border border-light" style="height: 350px">
                             <div class="image mx-auto mt-4" style="width: 100px; height: 100px">

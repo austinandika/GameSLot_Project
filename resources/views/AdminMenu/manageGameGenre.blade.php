@@ -17,130 +17,20 @@
                     </tr>
                     </thead>
                     <tbody style="background-color: white">
-                        <tr class="">
-                            <td class="align-middle">
-                                <div class="fw-bold ms-3">
-                                    RPG
-                                </div>
-                            </td>
 
-                            <td class="text-end align-middle">
-                                <a href="" class="text-decoration-none text-primary fw-bold">Edit</a>
-                            </td>
-                        </tr>
+                        @foreach ($genres as $genre)
+                            <tr class="">
+                                <td class="align-middle">
+                                    <div class="fw-bold ms-3">
+                                        {{ $genre->genre }}
+                                    </div>
+                                </td>
 
-
-                        <tr class="">
-                            <td class="align-middle" style="width: 80%">
-                                <div class="fw-bold ms-3">
-                                    RPG
-                                </div>
-                            </td>
-
-                            <td class="text-end align-middle" style="width: 20%;">
-                                <a href="" class="text-decoration-none text-primary fw-bold pe-3">Edit</a>
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="align-middle" style="width: 80%">
-                                <div class="fw-bold ms-3">
-                                    RPG
-                                </div>
-                            </td>
-
-                            <td class="text-end align-middle" style="width: 20%;">
-                                <a href="" class="text-decoration-none text-primary fw-bold pe-3">Edit</a>
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="align-middle" style="width: 80%">
-                                <div class="fw-bold ms-3">
-                                    RPG
-                                </div>
-                            </td>
-
-                            <td class="text-end align-middle" style="width: 20%;">
-                                <a href="" class="text-decoration-none text-primary fw-bold pe-3">Edit</a>
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="align-middle" style="width: 80%">
-                                <div class="fw-bold ms-3">
-                                    RPG
-                                </div>
-                            </td>
-
-                            <td class="text-end align-middle" style="width: 20%;">
-                                <a href="" class="text-decoration-none text-primary fw-bold pe-3">Edit</a>
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="align-middle" style="width: 80%">
-                                <div class="fw-bold ms-3">
-                                    RPG
-                                </div>
-                            </td>
-
-                            <td class="text-end align-middle" style="width: 20%;">
-                                <a href="" class="text-decoration-none text-primary fw-bold pe-3">Edit</a>
-                            </td>
-                        </tr><tr class="">
-                            <td class="align-middle" style="width: 80%">
-                                <div class="fw-bold ms-3">
-                                    RPG
-                                </div>
-                            </td>
-
-                            <td class="text-end align-middle" style="width: 20%;">
-                                <a href="" class="text-decoration-none text-primary fw-bold pe-3">Edit</a>
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="align-middle" style="width: 80%">
-                                <div class="fw-bold ms-3">
-                                    RPG
-                                </div>
-                            </td>
-
-                            <td class="text-end align-middle" style="width: 20%;">
-                                <a href="" class="text-decoration-none text-primary fw-bold pe-3">Edit</a>
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="align-middle" style="width: 80%">
-                                <div class="fw-bold ms-3">
-                                    RPG
-                                </div>
-                            </td>
-
-                            <td class="text-end align-middle" style="width: 20%;">
-                                <a href="" class="text-decoration-none text-primary fw-bold pe-3">Edit</a>
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="align-middle" style="width: 80%">
-                                <div class="fw-bold ms-3">
-                                    RPG
-                                </div>
-                            </td>
-
-                            <td class="text-end align-middle" style="width: 20%;">
-                                <a href="" class="text-decoration-none text-primary fw-bold pe-3">Edit</a>
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td class="align-middle" style="width: 80%">
-                                <div class="fw-bold ms-3">
-                                    RPG
-                                </div>
-                            </td>
-
-                            <td class="text-end align-middle" style="width: 20%;">
-                                <a href="" class="text-decoration-none text-primary fw-bold pe-3">Edit</a>
-                            </td>
-                        </tr>
-
-
+                                <td class="text-end align-middle">
+                                    <a href="{{ route('manageGenre.detail', $genre->id) }}" class="text-decoration-none text-primary fw-bold">Edit</a>
+                                </td>
+                            </tr>
+                        @endforeach
 
 
                     </tbody>
