@@ -39,7 +39,7 @@
                                         <div class="col">
                                             <div class="d-flex justify-content-end align-items-center">
                                                 <div class="me-3">
-                                                    <img src="{{\Illuminate\Support\Facades\Storage::url('pegiImage/pegi18.png')}}" style="height: 50px" alt="">
+                                                    <img src="{{\Illuminate\Support\Facades\Storage::url('pegiImage/pegi'.$game->pegi_rating.'.png')}}" style="height: 50px" alt="">
                                                 </div>
 
                                                 <div>
