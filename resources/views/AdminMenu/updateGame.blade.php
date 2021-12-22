@@ -47,7 +47,7 @@
                                 </td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <div></div>
+                                        <img class="card-img-top rounded-circle border border-1" style="width: 40px; height: 40px" src="{{\Illuminate\Support\Facades\Storage::url($game->image)}}" alt="">
                                         <input type="file" class="form-control-file @error('image') is-invalid @enderror" id="fuGamePhoto" name="image" value="{{old('image')}}">
                                     </div>
 
