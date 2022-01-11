@@ -83,7 +83,7 @@ class GameController extends Controller
 
         // UNTUK SIMPEN IMAGE
         $file = $request->file('image');
-        $imageName = $validatedData['title'] . '-' . time() . '.' . $file->getClientOriginalExtension();
+        $imageName = time() . '.' . $file->getClientOriginalExtension();
         Storage::putFileAs('public/gameImage', $file, $imageName);
 
         // save new game
@@ -135,7 +135,7 @@ class GameController extends Controller
         if ($request->image != null) {
             // UNTUK SIMPEN IMAGE
             $file = $request->file('image');
-            $imageName = $validatedData['title'] . '-' . time() . '.' . $file->getClientOriginalExtension();
+            $imageName = time() . '.' . $file->getClientOriginalExtension();
             Storage::putFileAs('public/gameImage', $file, $imageName);
 
             // delete file foto yang lama
