@@ -31,7 +31,7 @@ class ProfileController extends Controller
         if ($request->profile_photo != null) {
             // get file
             $file = $request->file('profile_photo');
-            $imageName = auth()->user()->id . '-' . time() . '.' . $file->getClientOriginalExtension();
+            $imageName = time() . '.' . $file->getClientOriginalExtension();
             Storage::putFileAs('public/profileImage', $file, $imageName);
 
             // delete file foto yang lama
