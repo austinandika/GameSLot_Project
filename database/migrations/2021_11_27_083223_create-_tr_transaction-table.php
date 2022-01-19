@@ -19,7 +19,7 @@ class CreateTrTransactionTable extends Migration
             $table->bigInteger('user_id', false, true);
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('ms_users');
+            $table->foreign('user_id')->references('id')->on('ms_users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

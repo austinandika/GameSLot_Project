@@ -23,8 +23,8 @@ class CreateTrTransactionDetailTable extends Migration
             $table->integer('quantity', false, true);
             $table->timestamps();
 
-            $table->foreign('transaction_id')->references('id')->on('tr_transactions');
-            $table->foreign('game_id')->references('id')->on('ms_games');
+            $table->foreign('transaction_id')->references('id')->on('tr_transactions')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('game_id')->references('id')->on('ms_games')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

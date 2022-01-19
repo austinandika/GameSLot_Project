@@ -24,7 +24,7 @@ class CreateMsUserTable extends Migration
             $table->bigInteger('role_id', false, true);
             $table->timestamps();
 
-            $table->foreign('role_id')->references('id')->on('ms_roles');
+            $table->foreign('role_id')->references('id')->on('ms_roles')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

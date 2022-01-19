@@ -23,7 +23,7 @@ class CreateMsGameTable extends Migration
             $table->bigInteger('game_genre_id', false, true);
             $table->timestamps();
 
-            $table->foreign('game_genre_id')->references('id')->on('ms_game_genres');
+            $table->foreign('game_genre_id')->references('id')->on('ms_game_genres')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
