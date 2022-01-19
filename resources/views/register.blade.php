@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Login')
+@section('title', 'Register')
 
 @section('content')
     <div class="container" style="min-height: 30vw">
@@ -28,18 +28,36 @@
                     <div class="mb-3">
                         <label for="txtName" class="form-label">Name</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" id="txtName" name="name" required value="{{ old('name') }}">
+
+                        @error('name')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
                     {{-- Email --}}
                     <div class="mb-3">
                         <label for="txtEmail" class="form-label">Email address</label>
                         <input type="email" class="form-control @error('email') is-invalid @enderror" id="txtEmail" aria-describedby="emailHelp" name="email" required value="{{ old('email') }}">
+
+                        @error('email')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
                     {{-- Password --}}
                     <div class="mb-3">
                         <label for="txtPassword" class="form-label">Password</label>
                         <input type="password" class="form-control @error('password') is-invalid @enderror" id="txtPassword" name="password" required>
+
+                        @error('password')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
                     {{-- Gender --}}
@@ -60,10 +78,22 @@
                         </label>
                     </div>
 
+                    @error('gender')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+
                     {{-- Date --}}
                     <div class="mb-3">
                         <label for="txtDateOfBirth" class="form-label">Date of Birth</label>
-                        <input class="date form-control @error('dateOfBirth') is-invalid @enderror" type="text" id="txtDateOfBirth" name="date_of_birth" placeholder="mm/dd/yyyy" required value="{{ old('date_of_birth') }}">
+                        <input class="date form-control @error('date_of_birth') is-invalid @enderror" type="text" id="txtDateOfBirth" name="date_of_birth" placeholder="mm/dd/yyyy" required value="{{ old('date_of_birth') }}">
+
+                        @error('date_of_birth')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
 

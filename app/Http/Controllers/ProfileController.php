@@ -50,7 +50,7 @@ class ProfileController extends Controller
     {
         $profile = MsUser::find(auth()->user()->id);
 
-        if (Hash::check($request->oldPassword, $profile->password)) {
+        if (Hash::check($request->old_password, $profile->password)) {
             $validatedData = $request->validate([
                 'old_password' => 'required',
                 'password' => 'required|confirmed|min:5|max:255',
